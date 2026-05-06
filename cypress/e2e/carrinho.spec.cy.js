@@ -7,12 +7,12 @@ describe('Carrinho', () => {
         })
     })
 
-    it('T01_Adicionar item ao carrinho', () => {
+    it('Deve adicionar item ao carrinho', () => {
         cy.get('#add-to-cart-sauce-labs-backpack').click()
         cy.get('.shopping_cart_badge').should('have.text', '1')
     })
 
-    it('T02_Finalizar compra', () => {
+    it('Deve finalizar compra', () => {
         // Adiciona um item ao carrinho
         cy.get('#add-to-cart-sauce-labs-backpack').click();
         cy.get('.shopping_cart_link').click();
