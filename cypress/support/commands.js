@@ -6,3 +6,7 @@ Cypress.Commands.add('login', (username, password) => {
     cy.get('#login-button').click()
   })
 })
+
+Cypress.Commands.add('addProduct', (productName) => { // parametrização de produtos, para diminuir repetição de código
+  cy.get(`#add-to-cart-sauce-labs-${productName}`).click()
+})
